@@ -1,0 +1,11 @@
+package com.example.filter;
+
+import org.apache.wicket.application.ReloadingClassLoader;
+
+public class SampleWicketFilter extends ReloadingWicketFilter {
+
+    static {
+        ReloadingClassLoader.includePattern("com.example.page.*");
+        ReloadingClassLoader.includePattern("com.example.page.**");
+    }
+}
